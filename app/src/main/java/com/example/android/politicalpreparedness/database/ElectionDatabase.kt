@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.android.politicalpreparedness.network.models.Election
 
+
 @Database(entities = [Election::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class ElectionDatabase: RoomDatabase() {
@@ -18,7 +19,7 @@ abstract class ElectionDatabase: RoomDatabase() {
         @Volatile
         private var INSTANCE: ElectionDatabase? = null
 
-        fun getInstance(context: Context): ElectionDatabase {
+        fun getDatabase(context: Context): ElectionDatabase {
             synchronized(this) {
                 var instance = INSTANCE
                 if (instance == null) {

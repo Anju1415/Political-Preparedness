@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">Political Preparedness</string>
 
-    <!-- TODO: Add necessary string values -->
+    <!-- DONE: Add necessary string values -->
+    <string name="follow">Follow Election</string>
+    <string name="unfollow">Unfollow Election</string>
 
 </resources>
