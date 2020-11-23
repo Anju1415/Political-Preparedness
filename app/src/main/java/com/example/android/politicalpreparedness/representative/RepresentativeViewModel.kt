@@ -51,8 +51,4 @@ class RepresentativeViewModel(application: Application) : AndroidViewModel(appli
     }
 
 
-    //TODO: Create function get address from geo location
-
-    //TODO: Create function to get address from individual fields
-
 }
