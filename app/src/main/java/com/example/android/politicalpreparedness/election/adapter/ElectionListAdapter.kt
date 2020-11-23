@@ -24,6 +24,7 @@ class ElectionListAdapter(
     override fun getItemCount(): Int = elections.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ElectionViewHolder {
+        //DONE: Bind ViewHolder
         val binding = ElectionItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ElectionViewHolder(binding)
     }
@@ -35,9 +36,9 @@ class ElectionListAdapter(
         }
     }
 
-    //TODO: Add companion object to inflate ViewHolder (from)
 }
 
+//DONE: Create ElectionViewHolder
 class ElectionViewHolder(val viewDataBinding: ElectionItemBinding) :
         RecyclerView.ViewHolder(viewDataBinding.root) {
     companion object {
@@ -46,6 +47,8 @@ class ElectionViewHolder(val viewDataBinding: ElectionItemBinding) :
     }
 }
 
+
+//DONE: Create ElectionDiffCallback
 class ElectionDiffCallback() : DiffUtil.ItemCallback<Election>() {
 
     override fun areItemsTheSame(oldItem: Election, newItem: Election): Boolean {
@@ -57,6 +60,7 @@ class ElectionDiffCallback() : DiffUtil.ItemCallback<Election>() {
     }
 }
 
+//DONE: Create ElectionListener
 class ElectionListener(val block: (Election) -> Unit) {
     fun onClick(election: Election) = block(election)
 }

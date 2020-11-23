@@ -2,6 +2,7 @@
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="representative"
             type="com.example.android.politicalpreparedness.representative.model.Representative" />
@@ -12,7 +13,7 @@
         android:layout_height="88dp">
 
         <ImageView
-            android:id="@+id/representative_photo"
+            android:id="@+id/representative_image"
             android:layout_width="56dp"
             android:layout_height="56dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +28,7 @@
             android:layout_margin="8dp"
             android:text="@{representative.office.name}"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:layout_constraintLeft_toRightOf="@id/representative_photo"
+            app:layout_constraintLeft_toRightOf="@id/representative_image"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -36,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="@{representative.official.name}"
-            app:layout_constraintLeft_toRightOf="@id/representative_photo"
+            app:layout_constraintLeft_toRightOf="@id/representative_image"
             app:layout_constraintTop_toBottomOf="@id/office_name" />
 
         <TextView
@@ -45,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="@{representative.official.party}"
-            app:layout_constraintLeft_toRightOf="@id/representative_photo"
+            app:layout_constraintLeft_toRightOf="@id/representative_image"
             app:layout_constraintTop_toBottomOf="@id/official_name" />
 
 

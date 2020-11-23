@@ -58,7 +58,7 @@
             android:id="@+id/state_locations"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()->viewModel.setIntentUrl(viewModel.voterInfo.state[0].electionAdministrationBody.votingLocationFinderUrl)}"
+            android:onClick="@{()->viewModel.intentUrl(viewModel.voterInfo.state[0].electionAdministrationBody.votingLocationFinderUrl)}"
             android:text="Voting Location"
             android:visibility='@{TextUtils.isEmpty(viewModel.voterInfo.state[0].electionAdministrationBody.votingLocationFinderUrl) ? View.GONE : View.VISIBLE}'
             app:layout_constraintStart_toStartOf="@id/election_date"
@@ -68,7 +68,7 @@
             android:id="@+id/state_ballot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()->viewModel.setIntentUrl(viewModel.voterInfo.state[0].electionAdministrationBody.electionInfoUrl)}"
+            android:onClick="@{()->viewModel.intentUrl(viewModel.voterInfo.state[0].electionAdministrationBody.electionInfoUrl)}"
             android:text="Ballot Information"
             android:visibility='@{TextUtils.isEmpty(viewModel.voterInfo.state[0].electionAdministrationBody.electionInfoUrl) ? View.GONE : View.VISIBLE}'
             app:layout_constraintStart_toStartOf="@id/election_date"
@@ -108,12 +108,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:onClick="@{() -> viewModel.toggleSaveElection(viewModel.election)}"
+            android:background="@color/colorAccent"
+            android:onClick="@{() -> viewModel.SaveElection(viewModel.election)}"
             android:text="@{(!viewModel.election.isSaved()) ? @string/follow : @string/unfollow}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            tools:text="Follow Election" />
+            tools:text="@string/follow_election" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

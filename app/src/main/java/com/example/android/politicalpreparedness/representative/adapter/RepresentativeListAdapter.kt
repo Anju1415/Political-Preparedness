@@ -32,7 +32,7 @@ class RepresentativeViewHolder(val binding: RepresentativeItemBinding) : Recycle
 
     fun bind(item: Representative) {
         binding.representative = item
-        binding.representativePhoto.setImageResource(R.drawable.ic_profile)
+        binding.representativeImage.setImageResource(R.drawable.ic_profile)
 
         //DONE: Show social links ** Hint: Use provided helper methods
         item.official.channels?.let { showSocialLinks(it) }
@@ -103,6 +103,3 @@ class RepresentativeDiffCallback : DiffUtil.ItemCallback<Representative>() {
     }
 
 }
-
-
-//TODO: Create RepresentativeListener
